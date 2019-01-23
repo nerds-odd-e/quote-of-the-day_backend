@@ -1,7 +1,6 @@
 FROM maven:slim as build-stage
-COPY ./pom.xml ./
-RUN mvn install
 COPY ./ ./
+RUN mvn install
 CMD mvn spring-boot:run
 
 
