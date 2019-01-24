@@ -1,25 +1,18 @@
 package com.odde.qotd;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "quotes")
 public class Quote {
-    private String content;
-    private String originalAuthor;
-    private String submitter;
+    @Id
+    public String id;
+    public String Quote;
+    public String Author;
+    public String Contributor;
+    public String Location;
+    public String Date;
+    public String Language;
+    public String ContributionDate;
 
-    public Quote() {
-        this.content = "Anything";
-        this.originalAuthor = "Anyone";
-        this.submitter = "Nobody";
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public String getOriginalAuthor() {
-        return originalAuthor;
-    }
-
-    public String getSubmitter() {
-        return submitter;
-    }
 }

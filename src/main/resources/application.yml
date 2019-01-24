@@ -3,4 +3,4 @@ spring:
     mongodb:
       host: mongo
       port: 27017
-      database: quote
+      database: quotes-database
